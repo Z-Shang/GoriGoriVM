@@ -1,0 +1,11 @@
+# Introduction
+GoriGoriVM is designed as a VM that is derived from the SECD machine, the main difference is that GoriGoriVM is polymorphically typed (in System-F's way).
+
+# Instructions
+As we all know, instructions of SECD are:
+
+> I ::= var x | (\lambda x.C) | App
+
+where as in GoriGoriVM:
+
+> I ::= var x \epsilon t | \Lambda t . \lambda x \epsilon T.C | 
