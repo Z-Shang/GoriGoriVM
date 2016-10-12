@@ -23,5 +23,12 @@
 #include "gc.h"
 
 gori* new_gorigori_vm(){
-    
+    gori* g = (gori *)gc_malloc(sizeof(gori));
+    g->max_addr = MAX_ADDR;
+    g->used_addr = 0;
+    g->stdi = stdin;
+    g->stdo = stdout;
+    g->stde = stderr;
+    g->vm = empty_frame();
+    return g;
 }

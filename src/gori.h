@@ -29,10 +29,11 @@ typedef struct gorigori_vm gori;
 struct gorigori_vm {
     int max_addr;
     int used_addr;
-    FILE* stdi;
-    FILE* stdo;
+    FILE* stdi; // *STANDARD-INPUT*
+    FILE* stdo; // *STANDARD-OUTPUT*
+    FILE* stde; // *STANDARD-ERROR*
 
-    frame* gori;
+    frame* vm;
 };
 
 gori* new_gorigori_vm();

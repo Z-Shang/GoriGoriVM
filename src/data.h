@@ -16,8 +16,8 @@
  * =====================================================================================
  */
 
-#ifndef __containers_h__
-#define __containers_h__
+#ifndef __gori_data_h__
+#define __gori_data_h__
 
 #include "type.h"
 
@@ -28,9 +28,6 @@ typedef struct frame frame;
 typedef struct symbol_type_pair st_pair;
 typedef struct opt_type_pair ot_pair;
 typedef struct symbol_type_value_triple stv_triple;
-typedef struct gori_type gori_t;
-typedef struct gori_value gori_v;
-typedef struct type_env t_env;
 typedef enum gori_opt {
     ADD,
     AP,
@@ -102,9 +99,13 @@ struct frame{
     frame* next;
 };
 
-extern env* toplevel_env;
-extern t_env* toplevel_types;
+env* toplevel_env;
 
+void env_init();
 frame* empty_frame();
+env* new_env();
+void add_to_top_level(stv_triple * stv);
+
+
 
 #endif
