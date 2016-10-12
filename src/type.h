@@ -20,6 +20,7 @@
 #define __gori_type_h__
 
 #include <stdbool.h>
+#include <stdlib.h>
 
 typedef struct gori_type gori_t;
 typedef struct gori_value gori_v;
@@ -50,6 +51,7 @@ struct gori_value{
             marble_phantasm get;
             //Function that turns a void pointer into valid gorigori value
             void* v;
+            size_t size;
         } defn_v;
     } is;
 };
