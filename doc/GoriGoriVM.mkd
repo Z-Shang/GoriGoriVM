@@ -8,4 +8,4 @@ As we all know, instructions of SECD are:
 
 where as in GoriGoriVM:
 
-> I ::= var x \epsilon t | \Lambda t . \lambda x \epsilon T.C | 
+> I ::= var x \epsilon t | \Lambda t . \lambda x \epsilon T.C | App
