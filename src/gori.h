@@ -24,6 +24,8 @@
 
 #define MAX_ADDR 2048
 
+typedef struct gorigori_vm gori;
+
 struct gorigori_vm {
     int max_addr;
     int used_addr;
@@ -32,5 +34,7 @@ struct gorigori_vm {
 
     frame* gori;
 };
+
+gori* new_gorigori_vm();
 
 #endif
